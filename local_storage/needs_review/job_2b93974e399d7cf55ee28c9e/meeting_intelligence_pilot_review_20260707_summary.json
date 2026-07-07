@@ -1,0 +1,104 @@
+{
+  "meeting_title": "Meeting Intelligence Pilot Review",
+  "meeting_date": null,
+  "company": "BrightLane Retail",
+  "executive_summary": "The team discussed using meeting intelligence to turn leadership conversations into review-ready materials while keeping people in the approval loop. The pilot should focus on measurable time savings, better operational prioritization, and traceable recommendations.",
+  "objectives": [
+    {
+      "objective": "Reduce manual effort spent converting meetings into leadership materials.",
+      "evidence": [
+        {
+          "timestamp": null,
+          "speaker": null,
+          "source_text": "Meeting Transcript"
+        }
+      ]
+    },
+    {
+      "objective": "Improve prioritization by grounding operational insights in source evidence.",
+      "evidence": [
+        {
+          "timestamp": null,
+          "speaker": null,
+          "source_text": "BrightLane Retail leadership operations meeting"
+        }
+      ]
+    },
+    {
+      "objective": "Pilot meeting intelligence before expanding into customer-facing automation.",
+      "evidence": [
+        {
+          "timestamp": null,
+          "speaker": null,
+          "source_text": "[00:00] Maya, COO: We spend too much time every Friday turning meeting notes into leadership updates. I want the pilot to show whether AI can reduce that manual reporting effort without lowering quality."
+        }
+      ]
+    }
+  ],
+  "action_items": [
+    {
+      "action": "Run a pilot using recent leadership and operations meeting transcripts.",
+      "owner": null,
+      "due_date": null,
+      "priority": "high",
+      "business_rationale": "Historical meetings can validate summary quality and review effort before production use.",
+      "evidence": [
+        {
+          "timestamp": null,
+          "speaker": null,
+          "source_text": "Meeting Transcript"
+        }
+      ]
+    },
+    {
+      "action": "Define review criteria for accuracy, evidence quality, cost, and time savings.",
+      "owner": null,
+      "due_date": null,
+      "priority": "high",
+      "business_rationale": "The pilot needs measurable acceptance criteria before broader distribution.",
+      "evidence": [
+        {
+          "timestamp": null,
+          "speaker": null,
+          "source_text": "BrightLane Retail leadership operations meeting"
+        }
+      ]
+    },
+    {
+      "action": "Keep human approval mandatory before any generated material is shared.",
+      "owner": null,
+      "due_date": null,
+      "priority": "medium",
+      "business_rationale": "Human review controls risk when recommendations are generated from imperfect transcripts.",
+      "evidence": [
+        {
+          "timestamp": null,
+          "speaker": null,
+          "source_text": "[00:00] Maya, COO: We spend too much time every Friday turning meeting notes into leadership updates. I want the pilot to show whether AI can reduce that manual reporting effort without lowering quality."
+        }
+      ]
+    }
+  ],
+  "next_steps": [
+    {
+      "step": "Collect candidate meeting transcripts for the pilot batch.",
+      "owner": null,
+      "timeframe": "Pilot setup"
+    },
+    {
+      "step": "Review generated summaries and decks with leadership stakeholders.",
+      "owner": null,
+      "timeframe": "After each pilot run"
+    },
+    {
+      "step": "Compare manual prep time against automated output and revision time.",
+      "owner": null,
+      "timeframe": "Pilot closeout"
+    }
+  ],
+  "risks_and_uncertainties": [
+    "Transcript quality may limit the accuracy of extracted decisions and owners.",
+    "Owners and due dates should remain null unless stated clearly in the source meeting.",
+    "Broader automation should wait until reviewers trust the evidence trail."
+  ]
+}

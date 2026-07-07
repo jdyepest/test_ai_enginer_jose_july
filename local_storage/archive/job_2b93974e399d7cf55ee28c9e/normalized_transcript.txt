@@ -1,0 +1,8 @@
+Meeting Transcript
+BrightLane Retail leadership operations meeting
+[00:00] Maya, COO: We spend too much time every Friday turning meeting notes into leadership updates. I want the pilot to show whether AI can reduce that manual reporting effort without lowering quality.
+[02:15] Omar, VP Operations: The useful part would be a deck that highlights the three biggest operational themes and backs each one with transcript evidence. We should avoid customer-facing automation until the leadership team trusts the output.
+[05:10] Lena, Head of Stores: Store managers need clearer prioritization. If the system can pull decisions, risks, and ownerless action items from the meeting, it would help us focus on the work that affects revenue and service.
+[08:40] Priya, Analytics Lead: We should test this on historical leadership and operations meetings first. The scorecard should include accuracy, cost per meeting, time saved, and whether reviewers can trace every recommendation to source evidence.
+[12:05] Maya, COO: Human review is mandatory. Nothing should go to Slack, email, or broader distribution until a reviewer approves it. Unknown owners and dates should stay blank rather than being guessed.
+[15:30] Omar, VP Operations: If the pilot works, phase two can connect more operational data from Shopify, Lightspeed, and Gorgias. For now, meeting intelligence is enough.

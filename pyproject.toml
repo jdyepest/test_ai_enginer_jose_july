@@ -1,0 +1,42 @@
+[project]
+name = "meeting-intelligence-poc"
+version = "0.1.0"
+description = "Local FastAPI POC for meeting intelligence automation"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi",
+  "uvicorn[standard]",
+  "pydantic",
+  "google-cloud-pubsub",
+  "google-cloud-firestore",
+  "google-auth",
+  "python-pptx",
+  "openai",
+  "httpx",
+  "python-multipart",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "pytest-asyncio",
+  "ruff",
+  "mypy",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
+strict = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+

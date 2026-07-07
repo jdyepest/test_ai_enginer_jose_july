@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+pydantic
+google-cloud-pubsub
+google-cloud-firestore
+google-auth
+python-pptx
+openai
+httpx
+python-multipart
+pytest
+pytest-asyncio
+ruff
+mypy
+

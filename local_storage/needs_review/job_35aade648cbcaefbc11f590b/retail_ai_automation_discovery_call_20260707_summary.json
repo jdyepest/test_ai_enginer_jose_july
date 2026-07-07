@@ -1,0 +1,160 @@
+{
+  "meeting_title": "Retail AI Automation Discovery Call",
+  "meeting_date": null,
+  "company": "BrightLane Retail",
+  "executive_summary": "BrightLane Retail, a growing multi-location specialty retail company, seeks a practical AI automation solution to improve internal reporting and customer support workflows without extensive IT overhead. The primary focus is on automating weekly leadership meeting summaries and operational reporting to save management time, improve prioritization, and increase decision quality. A phased approach is preferred, starting with meeting transcription, summarization, and action item extraction, followed by potential customer support automation. Key requirements include cost control, explainability, human review, maintainability, and integration with existing tools like Google Workspace and Slack.",
+  "objectives": [
+    {
+      "objective": "Automate and streamline weekly leadership meeting reporting to reduce manual effort and improve report quality and prioritization.",
+      "evidence": [
+        {
+          "timestamp": "00:45",
+          "speaker": "Sarah",
+          "source_text": "Our biggest issues are internal reporting, inventory coordination, and customer service follow-up."
+        },
+        {
+          "timestamp": "01:18",
+          "speaker": "Marcus",
+          "source_text": "Every Monday I pull store performance data... I usually spend like three or four hours every Monday morning just assembling a 'what happened last week' report for leadership."
+        },
+        {
+          "timestamp": "04:42",
+          "speaker": "Marcus",
+          "source_text": "If I could upload or connect the sales, support, and store notes data and have something generate a leadership summary with red flags, trends, and recommended follow-ups, that would save real time and probably improve quality."
+        },
+        {
+          "timestamp": "14:18",
+          "speaker": "Marcus",
+          "source_text": "Cutting my Monday reporting time in half, at least. And having leadership trust the output enough that they rely on it."
+        }
+      ]
+    },
+    {
+      "objective": "Develop a reliable AI workflow that transcribes meetings, synthesizes key insights, extracts objectives and action items, and outputs editable summaries and slide decks for leadership consumption.",
+      "evidence": [
+        {
+          "timestamp": "09:50",
+          "speaker": "Marcus",
+          "source_text": "If it could output a concise email and a 4- or 5-slide deck template, that would be great."
+        },
+        {
+          "timestamp": "13:16",
+          "speaker": "Alex",
+          "source_text": "User uploads recording and optional supporting documents... model generates summary, objectives, action items, and estimated business impact, then outputs an email draft and a short slide deck."
+        },
+        {
+          "timestamp": "16:59",
+          "speaker": "Sarah",
+          "source_text": "BrightLane wants a practical AI automation workflow... It should then produce an email-friendly output and a short editable slide deck."
+        }
+      ]
+    },
+    {
+      "objective": "Lay groundwork for future customer support automation by understanding current support volume, repetitive inquiries, and brand voice requirements.",
+      "evidence": [
+        {
+          "timestamp": "02:27",
+          "speaker": "Tina",
+          "source_text": "We get inquiries from email, website chat, and social DMs. A lot of them are pretty repetitive... My team answers most of it manually."
+        },
+        {
+          "timestamp": "03:01",
+          "speaker": "Tina",
+          "source_text": "Normal month maybe 1,500 to 2,000 customer messages across channels... maybe half to two-thirds are repetitive enough that a better workflow could help."
+        },
+        {
+          "timestamp": "06:10",
+          "speaker": "Alex",
+          "source_text": "If we were designing this in phases, I’d probably separate internal operations reporting from customer-facing automation so we don’t mix risk levels too early."
+        },
+        {
+          "timestamp": "18:10",
+          "speaker": "Tina",
+          "source_text": "For the future support use case, if you could maybe note what would be needed to expand into that later, that would help me make the internal case."
+        }
+      ]
+    }
+  ],
+  "action_items": [
+    {
+      "action": "Develop a proof of concept for automating weekly leadership meeting summaries using transcription, summarization, and action item extraction from recorded meetings and supporting documents.",
+      "owner": null,
+      "due_date": null,
+      "priority": "high",
+      "business_rationale": "This will reduce 25-30 hours of monthly management time spent on manual reporting and improve leadership decision-making by providing prioritized, synthesized insights.",
+      "evidence": [
+        {
+          "timestamp": "17:04",
+          "speaker": "Alex",
+          "source_text": "Propose a small proof of concept around one recurring meeting type... test how well the workflow can produce consistent summaries and action-item extraction."
+        },
+        {
+          "timestamp": "14:18",
+          "speaker": "Marcus",
+          "source_text": "Cutting my Monday reporting time in half, at least. And having leadership trust the output enough that they rely on it."
+        }
+      ]
+    },
+    {
+      "action": "Create a workflow that outputs concise, editable email summaries and slide decks for leadership review and approval before distribution.",
+      "owner": null,
+      "due_date": null,
+      "priority": "high",
+      "business_rationale": "Ensures leadership receives clear, actionable reports in preferred formats with human oversight to reduce risk and increase trust in AI-generated content.",
+      "evidence": [
+        {
+          "timestamp": "09:50",
+          "speaker": "Marcus",
+          "source_text": "If it could output a concise email and a 4- or 5-slide deck template, that would be great."
+        },
+        {
+          "timestamp": "16:08",
+          "speaker": "Sarah",
+          "source_text": "Human approval is mandatory before anything goes out broadly."
+        }
+      ]
+    },
+    {
+      "action": "Document and implement explicit preprocessing and validation steps to handle inconsistent input formats, naming conventions, and data quality before AI processing.",
+      "owner": null,
+      "due_date": null,
+      "priority": "medium",
+      "business_rationale": "Improves reliability and accuracy of AI outputs by addressing known data inconsistencies and reducing failure points in the workflow.",
+      "evidence": [
+        {
+          "timestamp": "10:10",
+          "speaker": "Marcus",
+          "source_text": "Messy. Different naming conventions, different managers, occasional typos, inconsistent structure in comments."
+        },
+        {
+          "timestamp": "17:39",
+          "speaker": "Marcus",
+          "source_text": "Call out likely failure points. Like poor transcript quality, inconsistent naming, duplicated action items."
+        }
+      ]
+    }
+  ],
+  "next_steps": [
+    {
+      "step": "Alex to prepare and share a simple architecture proposal, rough monthly cost estimates, and a proof-of-concept plan for automating meeting summaries.",
+      "owner": "Alex Rivera",
+      "timeframe": "Soon after meeting"
+    },
+    {
+      "step": "BrightLane team to provide three historical meeting recordings and related notes or reports for proof-of-concept testing.",
+      "owner": null,
+      "timeframe": "Before proof-of-concept development"
+    },
+    {
+      "step": "Evaluate proof-of-concept results for quality, cost, and human review needs to inform next phase planning, including potential customer support automation.",
+      "owner": null,
+      "timeframe": "Post proof-of-concept"
+    }
+  ],
+  "risks_and_uncertainties": [
+    "Inconsistent use of agreed formats and timely uploads by managers may reduce input quality and workflow effectiveness.",
+    "Potential inaccuracies or hallucinations in AI-generated summaries require human review to maintain trust and reliability.",
+    "Scattered and incomplete documentation of customer support policies may complicate future automation efforts.",
+    "Adoption challenges due to process discipline and ownership ambiguities could hinder success."
+  ]
+}

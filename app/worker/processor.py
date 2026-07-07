@@ -26,7 +26,7 @@ class MeetingWorker:
         self.queue = queue
         self.storage = LocalStorageClient(settings.local_storage_path)
         transcription_client = (
-            OpenAiTranscriptionClient(settings.transcription_api_key)
+            OpenAiTranscriptionClient(settings.transcription_api_key, settings.transcription_model)
             if settings.transcription_provider == "openai"
             else FakeTranscriptionClient()
         )

@@ -21,7 +21,12 @@ def test_worker_processes_test_transcript_and_duplicate_does_not_create_second_d
         "BrightLane wants a pilot with human review and evidence-backed action items.",
         encoding="utf-8",
     )
-    settings = Settings(local_storage_path=tmp_path)
+    settings = Settings(
+        local_storage_path=tmp_path,
+        llm_provider="fake",
+        transcription_provider="fake",
+        transcription_api_key="",
+    )
     repository = LocalJsonJobRepository(tmp_path / "jobs.json")
     queue = LocalFileJobQueue(tmp_path / "queue.jsonl")
     ingestion = IngestionService(settings, repository, queue)
@@ -48,4 +53,3 @@ def test_worker_processes_test_transcript_and_duplicate_does_not_create_second_d
     assert second.status == "duplicate"
     decks = list((tmp_path / "needs_review" / response.job_id).glob("*.pptx"))
     assert len(decks) == 1
-

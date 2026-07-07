@@ -138,8 +138,7 @@ class OpenAiLlmClient:
         self.model_name = model_name
 
     def summarize(self, transcript: str, prompt_version: str) -> MeetingSummary:
-        prompt = f"""
-Return only JSON matching the requested schema.
+        instructions = f"""
 Use only information supported by the transcript.
 Avoid inventing names, deadlines, data, or commitments.
 Mark unknown owners and due dates as null.
@@ -148,15 +147,29 @@ Make actions specific and business-oriented.
 Include evidence for all major recommendations.
 Distinguish confirmed decisions from suggested next steps.
 Mention uncertainty when evidence is incomplete.
+Every evidence value must be an array of objects with timestamp, speaker, and source_text.
+Do not use alternate keys such as action_item, rationale, or evidence_text.
 Prompt version: {prompt_version}
+"""
+        prompt = f"""
+Analyze this meeting transcript and return a structured meeting summary.
 
 Transcript:
 {transcript}
 """
         response = self.client.responses.create(
             model=self.model_name,
+            instructions=instructions,
             input=prompt,
-            text={"format": {"type": "json_object"}},
+            temperature=0.2,
+            text={
+                "format": {
+                    "type": "json_schema",
+                    "name": "meeting_summary",
+                    "schema": MeetingSummary.model_json_schema(),
+                    "strict": False,
+                }
+            },
         )
         return MeetingSummary.model_validate(json.loads(response.output_text))
 

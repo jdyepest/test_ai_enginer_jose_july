@@ -4,14 +4,20 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
-local_storage/*
+.DS_Store
+~$*
+local_storage/**
 !local_storage/.gitkeep
 !local_storage/intake/
 !local_storage/intake/.gitkeep
+!local_storage/intake/synthetic_retail_ai_transcript_downloads.txt
 !local_storage/archive/
 !local_storage/archive/.gitkeep
 !local_storage/needs_review/
 !local_storage/needs_review/.gitkeep
+!local_storage/needs_review/job_35aade648cbcaefbc11f590b/
+!local_storage/needs_review/job_35aade648cbcaefbc11f590b/retail_ai_automation_discovery_call_20260707_summary.json
+!local_storage/needs_review/job_35aade648cbcaefbc11f590b/retail_ai_automation_discovery_call_20260707_deck.pptx
 !local_storage/failed/
 !local_storage/failed/.gitkeep
 output/
@@ -19,4 +25,3 @@ output/
 *.mp3
 *.m4a
 *.mp4
-

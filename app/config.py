@@ -5,8 +5,26 @@ from dataclasses import dataclass
 from pathlib import Path
 
 
+def _load_dotenv(path: Path = Path(".env")) -> None:
+    if not path.exists():
+        return
+    for raw_line in path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        os.environ.setdefault(key.strip(), value.strip().strip('"').strip("'"))
+
+
+_load_dotenv()
+
+
 def _csv(name: str, default: str) -> list[str]:
     return [item.strip() for item in os.getenv(name, default).split(",") if item.strip()]
+
+
+def _env_or_fallback(primary: str, fallback: str) -> str:
+    return os.getenv(primary) or os.getenv(fallback) or ""
 
 
 @dataclass(frozen=True)
@@ -23,7 +41,8 @@ class Settings:
     openai_api_key: str = os.getenv("OPENAI_API_KEY", "")
     openai_model: str = os.getenv("OPENAI_MODEL", "gpt-4.1-mini")
     transcription_provider: str = os.getenv("TRANSCRIPTION_PROVIDER", "fake")
-    transcription_api_key: str = os.getenv("TRANSCRIPTION_API_KEY", "")
+    transcription_api_key: str = _env_or_fallback("TRANSCRIPTION_API_KEY", "OPENAI_API_KEY")
+    transcription_model: str = os.getenv("TRANSCRIPTION_MODEL", "gpt-4o-mini-transcribe")
     max_file_size_mb: int = int(os.getenv("MAX_FILE_SIZE_MB", "500"))
     supported_file_types: tuple[str, ...] = tuple(
         _csv("SUPPORTED_FILE_TYPES", "txt,mp3,m4a,wav,mp4")

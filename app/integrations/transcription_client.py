@@ -19,10 +19,11 @@ class FakeTranscriptionClient:
 
 
 class OpenAiTranscriptionClient:
-    def __init__(self, api_key: str):
+    def __init__(self, api_key: str, model: str):
         from openai import OpenAI
 
         self.client = OpenAI(api_key=api_key)
+        self.model = model
 
     def transcribe(self, path: Path) -> str:
         audio_path = path
@@ -36,6 +37,5 @@ class OpenAiTranscriptionClient:
                     text=True,
                 )
             with audio_path.open("rb") as file:
-                result = self.client.audio.transcriptions.create(model="whisper-1", file=file)
+                result = self.client.audio.transcriptions.create(model=self.model, file=file)
             return result.text
-
